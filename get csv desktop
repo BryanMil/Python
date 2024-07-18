@@ -1,0 +1,23 @@
+
+No Libaries
+import csv
+
+with open(r'C:\Users\Bryan.Miller\Desktop\GL 9.csv', 'r') as file:
+    my_reader = csv.reader(file, delimiter=',')
+    for row in my_reader:
+        print(row)
+
+
+
+
+
+With Pandas
+import pandas as pd
+
+df = pd.read_csv(r'C:\Users\Bryan.Miller\Desktop\GL 9.csv', usecols=["Memo/Description", "Debit", "Credit"]) 
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+print(df)
+
+
