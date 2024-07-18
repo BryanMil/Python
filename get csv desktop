@@ -14,6 +14,7 @@ with open(r'C:\Users\Bryan.Miller\Desktop\GL 9.csv', 'r') as file:
 With Pandas
 import pandas as pd
 
+#Opens the CSV with only the (MEMO, Debit, And Credit Column)
 df = pd.read_csv(r'C:\Users\Bryan.Miller\Desktop\GL 9.csv', usecols=["Memo/Description", "Debit", "Credit"]) 
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
