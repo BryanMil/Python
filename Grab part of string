@@ -1,0 +1,6 @@
+# grab the first part of a string before a char
+
+s = "wolfdo65gtornado!salmontiger223"
+s.split('!')[0]
+print(C)
+
