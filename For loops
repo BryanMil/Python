@@ -1,0 +1,14 @@
+'Finds conditions from A and B columns if met . Creates A C variable to carry don the new column until the conditions are met again then a new C variable is formed
+
+
+for index, row in df.iterrows():
+    A = row['Column Name']
+    B = row['Column Name']
+    if len(A)>10 and len(B)== 0 :
+       C = A.split('-')[0]
+       df.at[index, 'Column Name'] = C
+    else:
+       df.at[index, 'Column Name'] = C
+
+print(df)
+
