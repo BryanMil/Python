@@ -1,0 +1,19 @@
+#Look for file with wild Card
+#python
+
+import numpy as np
+import glob
+
+path = "/Users/Bryan.Miller/Desktop/AAFEY/General Ledger*.csv"
+for filename in glob.glob(path):
+    with open(filename, 'r') as f:
+        for line in f:
+            print (line)
+
+
+# with glob Pandas
+
+import pandas as pd
+import glob
+
+pd.read_csv(glob.glob(r'C:\Users\Bryan.Miller\Desktop\AAFEY\General Ledger*.csv')[0])
