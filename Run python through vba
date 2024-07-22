@@ -1,0 +1,42 @@
+#VBA
+Sub CalculatedArea()
+
+    Dim objShell As Object
+   
+    Set objShell = VBA.CreateObject("Wscript.Shell")
+    
+    Dim PythonExePath As String
+    PythonExePath = """C:\Users\Bryan.Miller\AppData\Local\Programs\Python\Python312\python.exe"""
+    
+    Dim PythonScriptPath As String
+    PythonScriptPath = """C:\Users\Bryan.Miller\Desktop\Python PRJ\Dev\Sample.py"""
+    
+    objShell.Run PythonExePath & " " & PythonScriptPath
+ End Sub
+
+
+
+#Python
+import xlwings as xw
+
+# Get Workbook
+Area_Calculation_worksheet: xw.Book
+Area_Calculation_worksheet = xw.books.active
+
+# Get Worksheet
+main_worksheet=xw.Sheet
+main_worksheet=Area_Calculation_worksheet.sheets["Main"]
+
+# Set/ Enter inputs
+length = float(main_worksheet["B1"].value)
+width = float(main_worksheet["B2"].value)
+
+# Do some calculations
+area: float
+area = length*width
+
+#Display the final output
+main_worksheet["B4"].value=area
+print(f"Inputs: length={length},width={width}")
+print(f"Area={area}")
+
