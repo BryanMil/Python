@@ -1,4 +1,5 @@
 #VBA
+
 Sub CalculatedArea()
 
     Dim objShell As Object
@@ -6,17 +7,20 @@ Sub CalculatedArea()
     Set objShell = VBA.CreateObject("Wscript.Shell")
     
     Dim PythonExePath As String
-    PythonExePath = """C:\Users\Bryan.Miller\AppData\Local\Programs\Python\Python312\python.exe"""
+    PythonExePath = """C:\Users\Bryan.Miller\Desktop\Python PRJ\Dev\Scripts\python.exe"""
     
     Dim PythonScriptPath As String
     PythonScriptPath = """C:\Users\Bryan.Miller\Desktop\Python PRJ\Dev\Sample.py"""
     
     objShell.Run PythonExePath & " " & PythonScriptPath
+ 
  End Sub
 
 
 
+
 #Python
+
 import xlwings as xw
 
 # Get Workbook
