@@ -1,3 +1,4 @@
+# No Jupyter Notebooks
 # Basic takes screen shot of page saves as demo.png
 
 from playwright.sync_api import sync_playwright
