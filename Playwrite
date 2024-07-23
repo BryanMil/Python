@@ -1,0 +1,10 @@
+# Basic takes screen shot of page saves as demo.png
+
+from playwright.sync_api import sync_playwright
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=False)
+    page = browser.new_page()
+    page.goto("https://github.com/BryanMil/Python/blob/main/Run%20python%20through%20vba")
+    page.screenshot(path="demo.png")
+    browser.close()
