@@ -1,4 +1,12 @@
 # No Jupyter Notebooks
+# Type Playwright codegen to get the code generator. Add HTML to the website that shows up
+# 
+
+
+
+
+
+
 # Basic takes screen shot of page saves as demo.png
 
 from playwright.sync_api import sync_playwright
