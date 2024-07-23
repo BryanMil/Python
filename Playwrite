@@ -9,3 +9,23 @@ with sync_playwright() as p:
     page.goto("https://github.com/BryanMil/Python/blob/main/Run%20python%20through%20vba")
     page.screenshot(path="demo.png")
     browser.close()
+
+
+
+
+
+# Asynch No Jupyter Notebook
+# Opens the website and prints the title of the website in the terminal if available
+
+import asyncio
+from playwright.async_api import async_playwright
+
+async def main():
+    async with async_playwright() as p:
+        browser = await p.firefox.launch(headless=False)
+        page = await browser.new_page()
+        await page.goto("https://www-p07.intacct.com/ia/acct/login.phtml")
+        print(await page.title())
+        await browser.close()
+
+asyncio.run(main())
