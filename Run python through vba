@@ -7,10 +7,10 @@ Sub CalculatedArea()
     Set objShell = VBA.CreateObject("Wscript.Shell")
     
     Dim PythonExePath As String
-    PythonExePath = """C:\Users\Bryan.Miller\Desktop\Python PRJ\Dev\Scripts\python.exe"""
+    PythonExePath = """C:\Users\Bryan.Miller\Desktop\python.exe"""
     
     Dim PythonScriptPath As String
-    PythonScriptPath = """C:\Users\Bryan.Miller\Desktop\Python PRJ\Dev\Sample.py"""
+    PythonScriptPath = """C:\Users\Bryan\Desktop\Sample.py"""
     
     objShell.Run PythonExePath & " " & PythonScriptPath
  
