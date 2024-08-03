@@ -32,7 +32,7 @@ async def main():
     async with async_playwright() as p:
         browser = await p.firefox.launch(headless=False)
         page = await browser.new_page()
-        await page.goto("https://www-p07.intacct.com/ia/acct/login.phtml")
+        await page.goto("")
         print(await page.title())
         await browser.close()
 
